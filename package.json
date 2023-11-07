@@ -1,0 +1,23 @@
+{
+  "name": "listagem-marvel",
+  "version": "1.0.0",
+  "description": "Aplicação para listagem e exibição de detalhes de personagens do universo Marvel ",
+  "main": "app.js ",
+  "scripts": {
+    "start": "node app.js "
+  },
+  "keywords": [
+    "marvel",
+    "api",
+    "personagens"
+  ],
+  "author": "Carlos Roberto Córdoba",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "md5": "^2.2.1",
+    "pug": "^2.0.3",
+    "query-string": "^6.0.0",
+    "request": "^2.85.0"
+  }
+}

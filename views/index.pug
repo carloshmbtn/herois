@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+    section.jumbotron.text-center
+        ul.list-group
+            each p in personagens
+                div(style="margin-bottom: 20px;")
+                    a(href= '/personagem/'+p.id)
+                            h4= p.name
+                            img.img-responsive(src= p.thumbnail.path+'.'+p.thumbnail.extension, width=400, heigth="auto")

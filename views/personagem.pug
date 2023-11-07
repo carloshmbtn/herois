@@ -1,0 +1,19 @@
+extends layout.pug
+
+
+block content
+    section.jumbotron.text-left
+        div.text-center
+            h3= personagem.name
+        //p= JSON.stringify(personagem)
+        p
+            strong Descrição:
+            if personagem.description
+                p= personagem.description
+            else
+                p Sem descrição!
+        p
+            strong Aparições:
+            ul
+            each a in personagem.comics.items
+                li= a.name
