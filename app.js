@@ -38,6 +38,7 @@ var requisicao = function(tipo, info, cb){
 
 app.get('/', function(req, res){
     requisicao('listagem', null, function(r){
+        if(!r || !r.data) return res.send("erro");
         res.render('index', {personagens: r.data.results});
     });
 });
@@ -45,6 +46,7 @@ app.get('/', function(req, res){
 app.get('/personagem/:id', function(req, res){
     var id = req.params.id;
     requisicao('personagem', id, function(r){
+        if(!r || !r.data) return res.send("erro");
         res.render('personagem', {personagem: r.data.results[0]});
     });
 });
